@@ -18,18 +18,18 @@ const dummyTeam = [
 
 const Home = () => {
   return (
-    <div className="p-6 space-y-6 bg-gray-50 min-h-screen">
-      <h1 className="text-2xl font-bold">📊 Dashboard</h1>
+    <div className="p-4 space-y-6 bg-gray-50 min-h-screen">
+      <h1 className="text-xl font-bold">📊 Dashboard</h1>
 
       {/* Summary Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         <DashboardCard title="โปรเจกต์ทั้งหมด" value="12" color="bg-blue-600" />
         <DashboardCard title="กำลังดำเนินการ" value="5" color="bg-yellow-500" />
         <DashboardCard title="เสร็จสิ้น" value="7" color="bg-green-500" />
       </div>
 
       {/* Pie Chart + Leaderboard */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="hidden md:grid md:grid-cols-2 gap-6">
         <ProjectStatusPie data={[5, 3, 2]} />
         <TeamLeaderboard teamData={dummyTeam} />
       </div>
