@@ -4,9 +4,9 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const ProjectStatusPie = ({ data }) => {
+const ProjectStatusPie = ({ data, labels = ['On Track', 'At Risk', 'Off Track'] }) => {
   const chartData = {
-    labels: ['On Track', 'At Risk', 'Off Track'],
+    labels,
     datasets: [
       {
         label: 'Projects',
